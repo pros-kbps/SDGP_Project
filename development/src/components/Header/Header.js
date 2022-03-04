@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 const Header = () => (
     <Grid container spacing={3}>
     <Grid item xs={12}>
-        <img src={headerImage} alt="Tesla" />
+        <img src={headerImage} alt="cricket stadium" />
     </Grid>
     </Grid>
 )
