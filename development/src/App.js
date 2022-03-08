@@ -1,27 +1,25 @@
 
 import React from 'react';
+import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {Route} from 'react-router-dom';
 import Start from './pages/Start';
 import Home from './pages/HomePage/Home';
 import Prediction from './pages/PredictionPage/Prediction';
-import './App.css';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
       <div>
-          <Route path ="/Home">
-              <Home/>
-          </Route>
-          <Route path ="/Start">
-              <Start/>
-          </Route>
-          <Route path="/prediction">
-              <Prediction/> 
-          </Route> 
-
+        <Router>
+            <Navbar />
+            <Switch>
+                <Route path="/" exact component={Start} />
+                <Route path="/home" exact component={Home} />
+                <Route path="/prediction" exact component={Prediction} />
+            </Switch>
+        </Router>
       </div>
-
   );
 }
 
