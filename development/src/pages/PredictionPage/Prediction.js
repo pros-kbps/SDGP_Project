@@ -1,12 +1,12 @@
 import React from "react";
-import MatchDetails from './MatchDetails';
+import Card from './Card';
 
 
 
 const prediction = () => {
     return (
         <div className="heder">
-            <MatchDetails/>
+            <Card/>
         </div>
         
 
