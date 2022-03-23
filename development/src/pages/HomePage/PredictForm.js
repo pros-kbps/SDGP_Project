@@ -28,6 +28,26 @@ const teamList = [
     { id: '10', title: 'Zimbabwe' },
     { id: '11', title: 'Ireland' },
     { id: '12', title: 'Afghanistan' },
+    { id: '13', title: 'Kenya' },
+    { id: '14', title: 'Scotland' },
+    { id: '15', title: 'Netherlands' },
+    { id: '16', title: 'Ireland' },
+    { id: '17', title: 'Bermuda' },
+    { id: '18', title: 'Namibia' },
+    { id: '19', title: 'Canada' },
+    { id: '20', title: 'UAE' },
+    { id: '21', title: 'Hong Kong' },
+    { id: '22', title: 'Nepal' },
+    { id: '23', title: 'P.N.G.' },
+    { id: '24', title: 'Oman' },
+    { id: '25', title: 'World-XI' },
+    { id: '26', title: 'Namibia' },
+    { id: '27', title: 'Nigeria' },
+    { id: '28', title: 'U.S.A.' },
+    { id: '29', title: 'Botswana' },
+    { id: '30', title: 'Cayman Islands' },
+    { id: '31', title: 'Singapore' },
+    { id: '32', title: 'Jersey ' }
 ]
 
 const tossDecList = [
@@ -159,9 +179,7 @@ const modelObject = {
 }
 
 const {
-    values,
-    setValues,
-    handleInputChange,
+    
     resetForm
 } = useForm(modelObject);
 
