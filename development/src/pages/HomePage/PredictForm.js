@@ -187,11 +187,16 @@ const {
         });
         let resJson = await res.json();
         if (res.status === 200) {
-            setTeam1("");
-            setTeam2("");
-            setTossWinner("");
-            console.log(res);
-            
+            // setTeam1("");
+            // setTeam2("");
+            // setTossWinner("");
+            // console.log(res);
+            this.props.router.push({
+                pathname: '/prediction',
+                state: {
+                  data: res               
+                }
+              });
         } else {
             console.log(res);
         }
