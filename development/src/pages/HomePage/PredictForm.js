@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import {Route} from 'react-router-dom';
 import { useForm, Form } from "../../components/useForm";
 import  Button from "../../components/Button";
 import DatePicker from "../../components/DatePicker";
 import Select  from "../../components/Select";
 import { Grid } from "@material-ui/core";
 import StyledPaper from '../../components/StyledPaper';
+import Prediction from '../PredictionPage/Prediction';
+import { isValidInputTimeValue } from '@testing-library/user-event/dist/utils';
 
 export default function PredictForm() {
 
@@ -14,6 +17,43 @@ const [team1, setTeam1] = useState("");
 const [team2, setTeam2] = useState("");
 const [tossWinner, setTossWinner] = useState("");
 const [tossDecision, setTossDecision] = useState(""); 
+const [twoTeams, setTwoTeams] = useState([]);
+const [teamList1, setTeamList1] = useState([ { 
+    id: '1', title: 'India' },
+{ id: '2', title: 'New Zealand' },
+{ id: '3', title: 'Sri Lanka' },
+{ id: '4', title: 'Pakistan' },
+{ id: '5', title: 'England' },
+{ id: '6', title: 'Australia' },
+{ id: '7', title: 'Bangladesh' },
+{ id: '8', title: 'South Africa' },
+{ id: '9', title: 'West Indies' },
+{ id: '10', title: 'Zimbabwe' },
+{ id: '11', title: 'Ireland' },
+{ id: '12', title: 'Afghanistan' },
+{ id: '13', title: 'Kenya' },
+{ id: '14', title: 'Scotland' },
+{ id: '15', title: 'Netherlands' },
+{ id: '16', title: 'Ireland' },
+{ id: '17', title: 'Bermuda' },
+{ id: '18', title: 'Namibia' },
+{ id: '19', title: 'Canada' },
+{ id: '20', title: 'UAE' },
+{ id: '21', title: 'Hong Kong' },
+{ id: '22', title: 'Nepal' },
+{ id: '23', title: 'P.N.G.' },
+{ id: '24', title: 'Oman' },
+{ id: '25', title: 'World-XI' },
+{ id: '26', title: 'Namibia' },
+{ id: '27', title: 'Nigeria' },
+{ id: '28', title: 'U.S.A.' },
+{ id: '29', title: 'Botswana' },
+{ id: '30', title: 'Cayman Islands' },
+{ id: '31', title: 'Singapore' },
+{ id: '32', title: 'Jersey ' }
+
+]);
+let [teamList2, setTeamList2] = useState([]);
 
 const teamList = [
     { id: '1', title: 'India' },
@@ -28,7 +68,6 @@ const teamList = [
     { id: '10', title: 'Zimbabwe' },
     { id: '11', title: 'Ireland' },
     { id: '12', title: 'Afghanistan' },
-    { id: '13', title: 'Kenya' },
     { id: '14', title: 'Scotland' },
     { id: '15', title: 'Netherlands' },
     { id: '16', title: 'Ireland' },
@@ -50,10 +89,22 @@ const teamList = [
     { id: '32', title: 'Jersey ' }
 ]
 
-const tossDecList = [
-    {id:'1', title:'Batting'},
-    {id:'2', title:'Bowling'}
-]
+// const teamList1 = [ { 
+//     id: '1', title: 'India' },
+// { id: '2', title: 'New Zealand' },
+// { id: '3', title: 'Sri Lanka' },
+// { id: '4', title: 'Pakistan' },
+// { id: '5', title: 'England' },
+// { id: '6', title: 'Australia' },
+// { id: '7', title: 'Bangladesh' },
+// { id: '8', title: 'South Africa' },
+// { id: '9', title: 'West Indies' },
+// { id: '10', title: 'Zimbabwe' },
+// { id: '11', title: 'Ireland' },
+// { id: '12', title: 'Afghanistan' }
+
+// ];
+// let teamList2 = [];
 
 const venueList = [
     {id: '1', title: 'Auckland'},
@@ -167,8 +218,14 @@ const venueList = [
     {id: '109', title: 'Canberra'},
     {id: '110', title: "St George's"},
     {id: '111', title: 'Dunedin'}
-
 ]
+
+const tossDecList = [
+    {id:'1', title:'Batting'},
+    {id:'2', title:'Fielding'}
+]
+
+
 
 const modelObject = {
     venue: '',
@@ -178,8 +235,45 @@ const modelObject = {
     isPermanent: false
 }
 
-const {
+let setTeam11 =(e)=>{
+    let array1 = [];
+    for(var i =0; i< teamList1.length; i++ ){
+        if(teamList1[i].id != e){
+            array1.push(teamList1[i]);
+        }
+    }
+    setTeamList2(array1);
     
+
+    setTeam1(e);
+
+}
+
+let setTeam22 =(e)=>{
+    setTeam2(e);
+    let array2 = [];
+    
+    array2.push(team2);
+    for(var i = 0; i<teamList.length; i++){
+        console.log(teamList[i]);
+        if(teamList[i].id == team1){
+            array2.push(teamList[i]);
+        }if(teamList[i].id == e){
+            array2.push(teamList[i]);
+        }
+    }
+    setTwoTeams(array2);
+
+    
+
+}
+// array2.push(team1,team2);
+//     setTossWinner(array2);
+
+const {
+    values,
+    setValues,
+    handleInputChange,
     resetForm
 } = useForm(modelObject);
 
@@ -208,6 +302,9 @@ const {
             setTeam1("");
             setTeam2("");
             setTossWinner("");
+            <Route path="/prediction">
+                <Prediction/> 
+            </Route> 
             console.log(res);
             
         } else {
@@ -229,7 +326,6 @@ const {
                 </Grid>
                 <Grid item xs={12} >
                     <DatePicker
-                        format = "dd/MM/yyyy"
                         name="date"
                         label="Match Date"
                         value={date}
@@ -246,22 +342,23 @@ const {
                         name="team1"
                         label="Enter First Team"
                         value={team1}
-                        onChange={(e) => setTeam1(e.target.value)}
-                        options={teamList}
+                        onChange={(e) => setTeam11(e.target.value) }
+                        options={teamList1}
                     />
                     <Select
                         name="team2"
                         label="Enter Second Team"
                         value={team2}
-                        onChange={(e) => setTeam2(e.target.value)}
-                        options={teamList}
+                        onChange={(e) => 
+                          setTeam22(e.target.value)}
+                        options={teamList2}
                     />
                     <Select
                         name="tossWinner"
                         label="Enter Toss Winner"
                         value={tossWinner}
                         onChange={(e) => setTossWinner(e.target.value)}
-                        options={teamList}
+                        options={twoTeams}
                     />
                     <Select
                         name="tossDecision"
