@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -27,7 +28,7 @@ public class PredictionController {
     @PostMapping(path = "/predict")
     @CrossOrigin
     public @ResponseBody
-    BaseResponse<PredictionResponse> predict(@RequestBody PredictionRequest predictionRequest) {
+    BaseResponse<PredictionResponse> predict(@Valid @RequestBody PredictionRequest predictionRequest) {
         return predictionService.predict(predictionRequest);
     }
 

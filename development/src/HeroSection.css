@@ -10,13 +10,14 @@
     background: -webkit-linear-gradient(to right, #243B55, #fff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, rgb(10, 92, 187)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    /*change background to white*/
-    background: #fff;
+    background: rgb(255, 255, 255);
     border-radius: 20px;
     transition: all 1s ease-in-out;
     cursor: pointer;
     border: 1.5px solid #141E30;
     padding: 10px;
     text-align: center;
+    color: black;
     
 }
 .matches:hover{

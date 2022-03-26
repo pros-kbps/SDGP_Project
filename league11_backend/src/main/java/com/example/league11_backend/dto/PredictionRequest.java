@@ -2,6 +2,7 @@ package com.example.league11_backend.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 public class PredictionRequest {
@@ -9,6 +10,7 @@ public class PredictionRequest {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     private Date date;
     private String venue;
+    @NotBlank(message = "Name is mandatory")
     private String team1;
     private String team2;
     private String tossWinner;

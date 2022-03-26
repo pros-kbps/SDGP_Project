@@ -6,13 +6,14 @@ import Start from './pages/Start';
 import Home from './pages/HomePage/Home';
 import Prediction from './pages/PredictionPage/Prediction';
 import Matches from './pages/Matches/Matches';
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { createBrowserHistory } from 'history';
+import { Router, Route, Switch } from "react-router-dom";
 
 function App() {
+  const history = createBrowserHistory();
   return (
       <div>
-        <Router>
+        <Router history={history}>
             <Navbar />
             <Switch>
                 <Route path="/" exact component={Start} />

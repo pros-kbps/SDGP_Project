@@ -1,5 +1,6 @@
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
+import { red } from "@mui/material/colors";
 
 const StyledPaper = withStyles((theme) => ({
     root: {
@@ -10,7 +11,11 @@ const StyledPaper = withStyles((theme) => ({
         backgroundColor:"#ADD8E6",
         width:'25%',
         aligncontent: "flex-end"
-}
+        
+    
+        
+},
+    
 }))(Paper);
 
 export default StyledPaper;

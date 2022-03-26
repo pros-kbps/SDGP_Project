@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {Route} from 'react-router-dom';
+import React, { useState } from 'react';
+import {Route,useHistory} from 'react-router-dom';
 import { useForm, Form } from "../../components/useForm";
 import  Button from "../../components/Button";
 import DatePicker from "../../components/DatePicker";
@@ -8,9 +8,24 @@ import { Grid } from "@material-ui/core";
 import StyledPaper from '../../components/StyledPaper';
 import Prediction from '../PredictionPage/Prediction';
 import { isValidInputTimeValue } from '@testing-library/user-event/dist/utils';
+import {useLocation} from 'react-router-dom';
 
-export default function PredictForm() {
 
+
+export default function PredictForm(props) {
+
+    let findTeamById = (team)=> {
+        for(var i=0; i<teamList.length; i++){
+            if(teamList[i].id == team){
+                return teamList[i];
+            }
+        }
+    
+    }
+
+    const location = useLocation();
+  const history = useHistory();
+const [errormsg, setErrormsg] = useState("");
 const [date, setDate] = useState();
 const [venue, setVenue] = useState("");
 const [team1, setTeam1] = useState("");
@@ -226,7 +241,6 @@ const tossDecList = [
 ]
 
 
-
 const modelObject = {
     venue: '',
     team2Id:'',
@@ -262,11 +276,13 @@ let setTeam22 =(e)=>{
             array2.push(teamList[i]);
         }
     }
-    setTwoTeams(array2);
-
-    
-
+    setTwoTeams(array2);   
 }
+
+
+
+
+
 // array2.push(team1,team2);
 //     setTossWinner(array2);
 
@@ -303,23 +319,22 @@ const {
             // setTeam2("");
             // setTossWinner("");
             // console.log(res);
-            this.props.router.push({
-                pathname: '/prediction',
-                state: {
-                  data: res               
-                }
-              });
+            history.push({pathname:"/prediction",state:{data:resJson,data2:{team1:findTeamById(team1), team2: findTeamById(team2), date:date}}});
         } else {
             console.log(res);
+            setErrormsg("Somthing went wrong! Please try again...");
+        
         }
         } catch (err) {
         console.log(err);
         }
+        resetForm()
     };
 
     return (
         <Grid container justify="flex-end">
         <StyledPaper elevation={4}>
+            
         <Form onSubmit={handleSubmit}>
             <Grid container >
                 <Grid item xs={12} >
@@ -380,6 +395,9 @@ const {
                             onClick={resetForm} />
 
                     </Grid>
+                        <h3 >{errormsg}</h3>
+                    
+                    
             </Grid>
         </Form>
         </StyledPaper>
