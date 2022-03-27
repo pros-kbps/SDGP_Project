@@ -8,11 +8,11 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>test</artifactId>
+	<groupId>com.iit.proskbps</groupId>
+	<artifactId>league11_backend</artifactId>
 	<version>${version}</version>
-	<name>test</name>
-	<description>Test project for Spring Boot</description>
+	<name>league11_backend</name>
+	<description>Backend for league of 11 prediction system</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
