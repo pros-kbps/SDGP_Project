@@ -59,7 +59,7 @@ const [matchList, setMatchList] = useState([]);
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    let res = await fetch("http://localhost:8080/upcoming-matches/search", {
+    let res = await fetch("http://128.199.26.201:8081/upcoming-matches/search", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
