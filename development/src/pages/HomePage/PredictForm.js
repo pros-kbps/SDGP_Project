@@ -26,7 +26,7 @@ export default function PredictForm(props) {
     const location = useLocation();
   const history = useHistory();
 const [errormsg, setErrormsg] = useState("");
-const [date, setDate] = useState();
+const [date, setDate] = useState(new Date());
 const [venue, setVenue] = useState("");
 const [team1, setTeam1] = useState("");
 const [team2, setTeam2] = useState("");
