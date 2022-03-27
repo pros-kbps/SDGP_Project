@@ -301,7 +301,7 @@ const {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-        let res = await fetch("http://localhost:8080/prediction/predict", {
+        let res = await fetch("http://128.199.26.201:8081/prediction/predict", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
