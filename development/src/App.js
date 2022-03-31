@@ -8,6 +8,7 @@ import Prediction from './pages/PredictionPage/Prediction';
 import Matches from './pages/Matches/Matches';
 import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from "react-router-dom";
+import Contact from "./pages/contactUs/Contact";
 
 function App() {
   const history = createBrowserHistory();
@@ -20,6 +21,8 @@ function App() {
                 <Route path="/home" exact component={Home} />
                 <Route path="/prediction" exact component={Prediction} />
                 <Route path="/matches" exact component={Matches} />
+                <Route path="/contact" exact component={Contact} />
+
             </Switch>
         </Router>
       </div>
