@@ -1,22 +1,21 @@
 body{
     background-color: #143443;
     margin-top: 0%;
+    font-family:'Roboto',sans-serif ;
+    
   }
   .root{
-    height:600;
+    height:500px;
     display:flex;
 
   }
-  .text{
-    align-items: center;
-    border: 100 50 100 50;
+  .content{
+      padding-top: 150px;
   }
-  
-  .img-cricket {
-    height: 560px;
-    width:390px;
-    
-    pointer-events: none;
+
+  .image img{
+    height:550px;
+    width:1000px;
     float:left;
   }
   
@@ -25,16 +24,31 @@ body{
     font-size :36px;
     
   }
-  .but1{
-    background-color: #31708e;
+  
+  #Button{
+    
+    background-color:transparent;
+    border: 2px solid white;
     color:white;
-    font-size:24px;
+    font-size:18px;
     text-align: center;
-    padding:5px 10px 5px 10px;
-    border-radius: 30px;
-  
+    padding:10px 25px 10px 25px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition:0.4s;
+    
+    
   }
-  
+
+  #Button:hover {
+    background-color:#26617c;
+    color:white;
+    right: -20px;
+    transition: 0.5s;
+
+  }
+ 
   
   
   

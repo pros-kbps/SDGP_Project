@@ -6,26 +6,32 @@ import '../styles/Start.css';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import startpageImg from '../assets/startimage.jpg';
 
 
 
-function Start() {
+export default function Start() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-           <img alt="complex" src="../assets/LPimg1.jpg" />
-        </Grid>
-        <Grid item xs={9} container direction="column" justifyContent="center" alignItems="center">
-          <div className="text">
-             <p id= "txt1">BATSMEN SCORE PREDICTOR</p>
-             <Button className="but1" variant="outlined" color="primary">Get Started</Button>
-          </div>
-          </Grid>
-      </Grid>
-    </Box>
+    <div class= "container">
+      <div class="image">
+         <img src = {startpageImg} alt = "cricket image"/>
+      </div>
+      <div class="content">
+        <logo>
+          LEAGUE OF 11
+        </logo>
+        <p id="txt1">
+          CRICKET TEAM PREDICTOR
+        </p>
+        <button id="Button">
+           Get Started
+        </button>
+
+      </div>
+
+    </div>
     
   );
 }
 
-export default Start;
+

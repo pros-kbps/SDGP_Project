@@ -17,7 +17,7 @@ function App() {
         <Router history={history}>
             <Navbar />
             <Switch>
-                <Route path="/" exact component={Start} />
+                <Route path="/start" exact component={Start} />
                 <Route path="/home" exact component={Home} />
                 <Route path="/prediction" exact component={Prediction} />
                 <Route path="/matches" exact component={Matches} />
