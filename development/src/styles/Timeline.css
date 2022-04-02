@@ -5,23 +5,14 @@
 }
 
 
-
-h1 {
-	text-align: center;
-}
-
-#app {
-	padding: 0 20px;
-	width: 100%;
-}
-
 .timeline-container {
-    width:900px;
+    width:600px;
     display: flex;
     float:left;
     flex-direction: column;
     position: relative;
-    margin-top:30px;
+    margin-left: 40px;
+    margin-top: 20px;
     padding:0px;
 }
 
@@ -35,11 +26,10 @@ h1 {
 }
 
 .timeline-item {
+    width:400px;
     display: flex;
-    justify-content: flex-end;
     padding-right: 30px;
     position: relative;
-    margin: 10px 0;
     width: 50%;
 }
 
@@ -48,20 +38,19 @@ h1 {
     justify-content: flex-start;
     padding-left: 30px;
     padding-right: 0;
+
 }
 
 .timeline-item-content {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 15px;
-    position: relative;
-    width: 400px;
-    max-width: 70%;
-    text-align: right;
+    align-items: center;
+    padding-left:10px; 
+    padding-right: 10px;
+    position: relative;   
+    width: 100%;
+    margin:0px;
 }
 
 .timeline-item-content::after {
@@ -75,11 +64,15 @@ h1 {
     width: 15px;
     height: 15px;
 }
-
-.timeline-item:nth-child(odd) .timeline-item-content {
-    text-align: left;
-    align-items: flex-start;
+.team1{
+    float:left;
+    padding: 5px;
 }
+.team2{
+    float:right;
+    padding: 5px;
+}
+
 
 .timeline-item:nth-child(odd) .timeline-item-content::after {
     right: auto;
@@ -87,22 +80,13 @@ h1 {
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-item-content .tag {
-    color: #fff;
+.timeline-item-content .title {
+    text-align: center;
     font-size: 12px;
     font-weight: bold;
-    top: 5px;
-    left: 5px;
-    letter-spacing: 1px;
-    padding: 5px;
-    position: absolute;
-    text-transform: uppercase;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content .tag {
-    left: auto;
-    right: 5px;
-}
+
 
 .timeline-item-content time {
     color: #777;
@@ -111,17 +95,15 @@ h1 {
 }
 
 .timeline-item-content p {
+    color: #333;
     font-size: 16px;
-    line-height: 24px;
-    margin: 15px 0;
-    max-width: 250px;
+    margin-top:10px;
 }
 
 .timeline-item-content a {
 	color: #333;
-	text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    
 }
 
 .timeline-item-content a::after {
@@ -146,59 +128,8 @@ h1 {
     left: -40px;
 }
 
-@media only screen and (max-width: 1023px) {
-    .timeline-item-content {
-        max-width: 100%;
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    .timeline-item-content,
-    .timeline-item:nth-child(odd) .timeline-item-content {
-        padding: 15px 10px;
-        text-align: center;
-        align-items: center;
-    }
 
-    .timeline-item-content .tag {
-        width: calc(100% - 10px);
-        text-align: center;
-    }
 
-    .timeline-item-content time {
-        margin-top: 20px;
-    }
 
-    .timeline-item-content a {
-        text-decoration: underline;
-    }
 
-    .timeline-item-content a::after {
-        display: none;
-    }
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}

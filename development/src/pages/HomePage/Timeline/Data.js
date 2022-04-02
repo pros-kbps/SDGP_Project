@@ -1,66 +1,63 @@
-const timelineData = [
-    {
-        text: 'Started working on the app-ideas repository',
-        date: 'February 25 2019',
-        category: {
-			tag: 'app-ideas',
-			color: '#FFDB14'
-		},
-        link: {
-            url: 'https://github.com/florinpop17/app-ideas',
-            text: 'Check it out on GitHub'
-        }
-    },
-    {
-        text: 'Started the Weekly Coding Challenge program',
-        date: 'March 04 2019',
-        category: {
-			tag: 'blog',
-			color: '#e17b77'
-		},
-        link: {
-            url: 'https://florin-pop/blog/2019/03/weekly-coding-challenge/',
-            text: 'Check it out here'
-        }
-    },
-    {
-        text: 'Got 1.000 followers on Twitter',
-        date: 'March 07 2019',
-        category: {
-			tag: 'twitter',
-			color: '#1DA1F2'
-		},
-        link: {
-            url: 'https://twitter.com/florinpop1705',
-            text: 'See profile'
-        }
-    },
-    {
-        text:
-            'I published my first article in the FreeCodeCamp Medium Publication',
-        date: 'March 18 2019',
-        category: {
-			tag: 'medium',
-			color: '#018f69'
-		},
-        link: {
-            url:
-                'https://medium.freecodecamp.org/how-to-build-a-double-slider-sign-in-and-sign-up-form-6a5d03612a34',
-            text: 'Check it out here'
-        }
-    },
-    {
-        text: 'Over 12.000 views in a single day on my Medium posts',
-        date: 'April 05 2019',
-        category: {
-			tag: 'medium',
-			color: '#018f69'
-		},
-        link: {
-            url: 'https://medium.com/@popflorin1705',
-            text: 'See profile'
-        }
-    }
-]
+const data = [{
+    header2: 'India VS Sri Lanka',
+    describe1 :  'Today',
+    describe2 :  '1st T20I',
+    describe3 : '12:30pm' ,
+    describe4 : 'Colombo' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/india/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/sri-lanka/flag-square-250.png'
+   
+},
+{
+    header2: 'Australia VS Pakistan',
+    describe1 :  'Tommorow',
+    describe2 :  '1st T20I',
+    describe3 : '01:30pm' ,
+    describe4 : 'MCG' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/australia/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/pakistan/flag-square-250.png'
+   
+},
+{
+    header2: 'Bangaladesh VS S Africa',
+    describe1 :  'Tommorow',
+    describe2 :  '1st T20I',
+    describe3 : '03:30pm' ,
+    describe4 : 'Mirpur' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/bangladesh/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/south-africa/flag-square-250.png'
+   
+},
+{
+    header2: 'India VS Sri Lanka',
+    describe1 :  '25th of February',
+    describe2 :  '2nd T20I',
+    describe3 : '12:30am' ,
+    describe4 : 'Colombo' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/india/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/sri-lanka/flag-square-250.png'
+   
+},
 
-export default timelineData;
+{
+    header2: 'Australia VS Pakistan',
+    describe1 :  '26th of February',
+    describe2 :  '2nd T20I',
+    describe3 : '01:30pm' ,
+    describe4 : 'MCG' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/australia/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/pakistan/flag-square-250.png'
+   
+},
+{
+    header2: 'Bangaladesh VS S Africa',
+    describe1 :  '27th of February',
+    describe2 :  '2nd T20I',
+    describe3 : '03:30pm' ,
+    describe4 : 'Mirpur' ,          
+    img1 : 'https://cdn.countryflags.com/thumbs/bangladesh/flag-square-250.png',
+    img2 : 'https://cdn.countryflags.com/thumbs/south-africa/flag-square-250.png'
+   
+}]
+
+export default data;
