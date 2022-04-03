@@ -3,7 +3,7 @@ import PredictForm from './PredictForm'
 import {Grid } from '@material-ui/core';
 import Container from '@mui/material/Container';
 import Header from "../../components/Header/Header"
-import Timeline from './Timeline/timeline'
+import Timeline from './Timeline2/timeline'
 export default function Home() {
     
     return (
