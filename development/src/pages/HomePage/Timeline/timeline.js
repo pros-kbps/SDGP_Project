@@ -10,7 +10,6 @@ const Timeline = () =>
             {timelineData.map((data, idx) => (
                 <TimelineItem data={data} key={idx} />
             ))}
-            
         </div>
     );
 
