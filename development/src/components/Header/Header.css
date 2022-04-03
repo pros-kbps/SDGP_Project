@@ -1,8 +1,8 @@
-.header{
+.Header{
     padding: 10px 0;
     text-align: center;
 }
-.header img {
+.Header img {
     height: 300px;
     width: 100%;
     object-fit: cover;
