@@ -1,5 +1,5 @@
 import React from 'react';
-import timelineData from '../../Matches/Data';
+
 
 const TimelineItem = ({data}) => (
     <div className="timeline-item">

@@ -319,6 +319,7 @@ const {
             // setTeam2("");
             // setTossWinner("");
             // console.log(res);
+            console.log(resJson)
             history.push({pathname:"/prediction",state:{data:resJson,data2:{team1:findTeamById(team1), team2: findTeamById(team2), date:date}}});
         } else {
             console.log(res);
