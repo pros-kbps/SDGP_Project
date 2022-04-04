@@ -319,6 +319,7 @@ const {
             // setTeam2("");
             // setTossWinner("");
             // console.log(res);
+            //setErrormsg({data})
             history.push({pathname:"/prediction",state:{data:resJson,data2:{team1:findTeamById(team1), team2: findTeamById(team2), date:date}}});
         } else {
             console.log(res);
@@ -335,7 +336,7 @@ const {
         <Grid container justify="flex-end">
         <StyledPaper elevation={4}>
             
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} action="/predict">
             <Grid container >
                 <Grid item xs={12} >
                     <h1>LET'S PREDICT!</h1>
