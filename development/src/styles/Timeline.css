@@ -16,7 +16,8 @@ h1 {
 }
 
 .timeline-container {
-    width:900px;
+    
+    width:800px;
     display: flex;
     float:left;
     flex-direction: column;

@@ -11,7 +11,7 @@ import { isValidInputTimeValue } from '@testing-library/user-event/dist/utils';
 import {useLocation} from 'react-router-dom';
 
 
-
+const data =[]
 export default function PredictForm(props) {
 
     let findTeamById = (team)=> {
@@ -314,11 +314,12 @@ const {
             }),
         });
         let resJson = await res.json();
+        data = [team1,team2,venue,tossWinner,tossDecision]
         if (res.status === 200) {
             // setTeam1("");
             // setTeam2("");
             // setTossWinner("");
-            // console.log(res);
+            console.log(data);
             //setErrormsg({data})
             history.push({pathname:"/prediction",state:{data:resJson,data2:{team1:findTeamById(team1), team2: findTeamById(team2), date:date}}});
         } else {
@@ -396,6 +397,7 @@ const {
                             onClick={resetForm} />
 
                     </Grid>
+                        
                         <h3 >{errormsg}</h3>
                     
                     
@@ -405,3 +407,4 @@ const {
         </Grid>
     )
 }
+
