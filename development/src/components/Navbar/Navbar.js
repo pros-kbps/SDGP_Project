@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { MenuItems } from "./MenuItems"
+import { MenuItems } from "./MenuItems";
+import logo from "../../assets/Logo.png";
 
 import './Navbar.css'
 
@@ -13,7 +14,7 @@ class Navbar extends Component{
     render(){
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">League of 11</h1> 
+                <h1 className="navbar-logo"><a href='./Start'><img src={logo}/></a></h1> 
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fa-solid fa-bars'}></i>
 

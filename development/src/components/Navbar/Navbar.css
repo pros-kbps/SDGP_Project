@@ -13,6 +13,8 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+    padding:15px 0px 0px 5px;
+    
 
 }
 
@@ -55,6 +57,14 @@
 
 .menu-icon{
     display: none;
+}
+a{
+    text-decoration: none;
+}
+img {
+    width:300px;
+    height:150px;
+    
 }
 
 @media screen and (max-width: 960px) {
