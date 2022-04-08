@@ -1,11 +1,10 @@
 import React,{ useState } from "react";
-
 import {useLocation} from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import '../../styles/Card.css';
 
 export default function Prediction(props){
-
+    let data;
     const { state } = props.location;
     console.log(state)
     return (
@@ -17,7 +16,7 @@ export default function Prediction(props){
             <p>Date: {state.data2.date.getDate()}-{state.data2.date.getMonth() + 1}-{state.data2.date.getFullYear()}</p>
             <p>Team1: {state.data2.team1.title}</p>
             <p>Team2: {state.data2.team2.title}</p>
-            <b>Winning Team: {state.data.data.winningTeam}</b>
+            <b>Winning Team: </b>
           </div>
       </div>
     </Grid>
