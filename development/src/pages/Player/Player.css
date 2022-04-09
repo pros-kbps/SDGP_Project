@@ -1,0 +1,131 @@
+.image2 > img{
+    border-radius: 7%;
+}
+
+.stats {
+    color: aliceblue;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .column {
+    flex: 50%;
+  }
+
+  .column > img{
+      border-radius: 8%;
+      border: 1px solid rgb(227, 215, 248);
+      padding: 5px;
+  }
+
+  .name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: azure;
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .country{
+      
+      font-family: 'Montserrat', sans-serif;
+      color: aliceblue;
+  }
+
+  .topic{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: rgb(179, 182, 180);
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .answer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: azure;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .span{
+      margin-top: 15px;
+      float: left;
+      display: inline-flex;
+      margin-left: 25px;
+      
+  }
+
+  .profile{
+      margin-top: 30px;
+  }
+
+  .div2 {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .wp-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  .wp-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .wp-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .wp-table th:first-child,
+  .wp-table td:first-child {
+  }
+  
+  .wp-table td,
+  .wp-table th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+  }
+  
+  .wp-table th {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+
+  }
+  
+  .wp-table {
+    font-size: 15px !important;
+    
+    width: 100%;
+    display: table;
+    font-family: "Montserrat", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .columnNames{
+      font-weight: 500;
+      color: rgb(109, 107, 107);
+  }
+  
+
+ .rawName{
+     color: black;
+     font-size: 13px;
+     font-weight: 700;
+ }

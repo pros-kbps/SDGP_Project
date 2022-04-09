@@ -1,0 +1,119 @@
+
+
+.image > img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid rgb(227, 215, 248);
+    margin: 5px;
+    
+}
+
+
+.age{
+    color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
+
+    margin-top: auto;
+    display: grid;
+    
+}
+
+.list{
+    width : 40%;
+    display: flex;
+    
+    margin-top: 1.5rem;
+    margin-left: auto;
+  margin-right: auto;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, rgb(10, 92, 187)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /*change background to white*/
+    background: #133443;
+    border-radius: 8px;
+    
+   
+    border: 2.5px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.description > h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.description{
+    color: #fff;
+}
+
+.description > a {
+    color: #fff;
+}
+
+.h1 {
+    color: #fff;
+    text-decoration: none;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
+
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    
+ }

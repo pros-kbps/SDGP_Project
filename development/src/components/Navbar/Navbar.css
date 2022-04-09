@@ -1,11 +1,15 @@
 .NavbarItems {
-    background: linear-gradient(90deg, #143443 0%, #143443 100%);
+    background: #133443;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+    
+    
 }
 
 .navbar-logo{
@@ -13,12 +17,14 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+    font-size: 30px;
 
 }
 
 .fa-react{
     margin-left: 0.5rem;
     font-size: 1.6rem;
+    
 }
 
 .nav-menu {
@@ -30,20 +36,27 @@
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
+    
 
 }
 
 .nav-links{
-    color: white;
+    color: rgb(151, 175, 255);
     text-decoration: none;
     padding: 0.5rem 1rem;
+    
+    
 }
 
 .nav-links:hover{
-    background-color: 6d76f7;
+    background-color: #6d76f7;
     border-radius: 4px;
-    transition: all 0.2s ease-out;
+    border-bottom: 2px solid #f00946;
+    
 }
+
+
+
 
 .fa-bars {
     color: fff;
@@ -75,7 +88,7 @@
     }
 
     .nav-menu.active {
-        background: #143443;
+        background: #6668f4;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -90,8 +103,9 @@
     }
 
     .nav-links:hover {
-        background-color: #143443;
+        background-color: #7577fa;
         border-radius: 0;
+        border-bottom: 2px solid #f00946;
     }
 
     .navbar-logo {
@@ -136,6 +150,10 @@
         transition: 250ms;
     }
 
-    
+    Button {
+        display: none;
+    }
+
+   
 
 }
