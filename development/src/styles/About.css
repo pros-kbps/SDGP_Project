@@ -1,0 +1,60 @@
+.About {
+    text-align: center;
+    padding-bottom: 5cm;
+    border-bottom: #d4d7de;
+  }
+  
+  .App-header{
+    height: 500px;
+  }
+  
+  .img{
+    background-position: top;
+    width: 1260px;
+    height: 400px;
+  }
+  
+  .section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .main-heading{
+    color: #fb7405;
+    font-size: 26px;
+  }
+  
+  .underline{
+    height: 4px;
+    width: 4rem;
+    background-color: #fb7405;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .info{
+    font-size: 10px;
+  }
+  
+  .bg-c-light{
+    background-color: #d4d7de;
+  }
+  
+  .texts{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.83);
+    text-align: center;
+  }
+  
+  .heading{
+    font-size: 3pc;
+    text-align: center;
+    padding-bottom: 15px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fb7405;
+  }
+  
+  .ProfileImg{
+    width: 1px;
+  }

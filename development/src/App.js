@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Start from './pages/Start';
+import About from './pages/About';
 import Home from './pages/HomePage/Home';
 import Prediction from './pages/PredictionPage/Prediction';
 import Matches from './pages/Matches/Matches';
@@ -26,7 +27,7 @@ function App() {
                 <Route path="/matches" exact component={Matches} />
                 <Route path="/statistics" exact component={Statistics} />
                 <Route path="/player" exact component={Player} />
-                
+                <Route path="/about" exact component={About} />
 
             </Switch>
         </Router>
