@@ -22,10 +22,12 @@ public class PredictionService {
         BaseResponse<PredictionResponse> result = new BaseResponse<>();
 
         try {
-            PredictionResponse predict = loadBalancer.getData(predictionRequest);
-            System.out.println(predict.getWinningTeam());
+            String predict = loadBalancer.getData(predictionRequest);
+            System.out.println(predict);
             result.setStatus(true);
-            result.setData(predict);
+            PredictionResponse predictionResponse = new PredictionResponse();
+            predictionResponse.setWinningTeam(predict);
+            result.setData(predictionResponse);
 
         } catch (Exception ex) {
             System.out.println(ex);

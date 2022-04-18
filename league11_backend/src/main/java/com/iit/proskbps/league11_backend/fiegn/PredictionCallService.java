@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-@FeignClient(value = "predict", url = "http://predict.free.beeceptor.com")
+@FeignClient(name = "predictionClient", url = "http://localhost:5000")
 public interface PredictionCallService {
 
     @RequestMapping(method= RequestMethod.POST, value="/predict")
-    public PredictionResponse getData(@RequestBody PredictionRequest predictionRequest);
+    public String getData(@RequestBody PredictionRequest predictionRequest);
 }
