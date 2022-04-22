@@ -1,11 +1,7 @@
 import React from 'react';
-//import cricket from '../assets/LP img1.jpg';
-//import {link} from 'react-router-dom';
-import { styled } from '@mui/material/styles'
 import '../styles/Start.css';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+
 
 import startpageImg from '../assets/start1.png';
 
@@ -15,9 +11,7 @@ import startpageImg from '../assets/start1.png';
 export default function Start() {
   return (
     <div class= "container">
-      <div class="image">
-         <img src = {startpageImg} alt = "cricket image"/>
-      </div>
+      <Grid item xs={4}>
       <div class="content">
         <logo>
           LEAGUE OF 11
@@ -28,11 +22,16 @@ export default function Start() {
         <button id="Button" onclick={onclick}>
            Get Started
         </button>
-
       </div>
+      </Grid>
+      <Grid item xs={12}>
+          <div className="image">
+            <img src = {startpageImg} alt = "cricket image"/>
+          </div>
+        </Grid>
 
     </div>
-    
+
   );
 }
 
