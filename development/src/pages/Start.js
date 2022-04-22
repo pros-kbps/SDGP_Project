@@ -6,6 +6,9 @@ import '../styles/Start.css';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { useHistory } from "react-router-dom";
+import history from './history'
+
 
 import startpageImg from '../assets/start1.png';
 
@@ -13,6 +16,7 @@ import startpageImg from '../assets/start1.png';
 
 
 export default function Start() {
+
   return (
     <div class= "container">
       <div class="image">
@@ -25,7 +29,7 @@ export default function Start() {
         <p id="txt1">
           CRICKET TEAM PREDICTOR
         </p>
-        <button id="Button" onclick={onclick}>
+        <button id="Button" onClick={() => history.push('/home')}>
            Get Started
         </button>
 
