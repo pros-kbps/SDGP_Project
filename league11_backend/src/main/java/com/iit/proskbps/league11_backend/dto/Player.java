@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Player {
     private int id;
+    private String objectId;
     private String name;
     private String longName;
     private DateOfBirth dateOfBirth;
@@ -13,7 +14,13 @@ public class Player {
     private List<String> bowlingStyles;
     private String playingRole;
 
+    public String getObjectId() {
+        return objectId;
+    }
 
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
 
     public int getId() {
         return id;

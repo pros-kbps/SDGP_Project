@@ -6,6 +6,7 @@ public class PlayerStats {
 
     private int id;
     private String fullName;
+    private String name;
     private DateOfBirth dateOfBirth;
     private PlayerImage image;
     private List<String> battingStyles;
@@ -17,6 +18,14 @@ public class PlayerStats {
 
     private List<Stats> careerAvg;
     private List<Stats> vsTeamStats;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getId() {
         return id;

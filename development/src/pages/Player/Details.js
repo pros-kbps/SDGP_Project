@@ -2,13 +2,22 @@ import React from "react";
 import "./Player.css";
 
 function Details(props) {
+
+  let setArray =(e)=>{
+    console.log (e);
+    if(e.length>0){
+      return e[0];
+    }else{
+      return "";
+    }
+  }
   return (
     <>
       <div class="columns">
         <div class="column">
-          <img src={props.img} />
+          <img src={"https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/" + props.image?.url } />
           <p className="name">{props.name} </p>
-          <p className="country">{props.country}  |  {props.role}</p> <br></br>
+          <p className="country">{props.countryName}  |  {props.playingRole}</p> <br></br>
   
         </div>
 
@@ -16,12 +25,12 @@ function Details(props) {
         <div class="column">
         <div className="profile">
             <p class= "span"> <span className="topic">FULL NAME - </span> <span className="answer"> &nbsp;{props.fullName}</span></p>
-            <p class="span"><span className="topic">BORN - </span> <span className="answer"> &nbsp;{props.born}&emsp;</span></p> 
-            <p class="span"><span className="topic">AGE - </span> <span className="answer"> &nbsp;{props.age}</span></p>
-            <p class="span"><span className="topic">BATTING STYLE - </span> <span className="answer"> &nbsp;{props.battingStyle}</span></p>
-            <p class="span"><span className="topic">BOWLING STYLE - </span> <span className="answer"> &nbsp;{props.bowlingStyle}</span></p>
-            <p class="span"><span className="topic">PLAYING ROLE - </span> <span className="answer"> &nbsp;{props.role}</span></p>
-            <p class="span"><span className="topic">HEIGHT - </span> <span className="answer"> &nbsp;{props.height}</span></p>
+            <p class="span"><span className="topic">BORN - </span> <span className="answer"> &nbsp;{props.dateOfBirth?.year}-{props.dateOfBirth?.month}-{props.dateOfBirth?.date}&emsp;</span></p> 
+            <p class="span"><span className="topic">AGE - </span> <span className="answer"> &nbsp;{new Date().getFullYear() -props.dateOfBirth?.year}</span></p>
+            <p class="span"><span className="topic">BATTING STYLE - </span> <span className="answer"> &nbsp;{setArray(props.battingStyles)}</span></p>
+            <p class="span"><span className="topic">BOWLING STYLE - </span> <span className="answer"> &nbsp;{setArray(props.bowlingStyles)}</span></p>
+            <p class="span"><span className="topic">PLAYING ROLE - </span> <span className="answer"> &nbsp;{props.playingRole}</span></p>
+            <p class="span"><span className="topic">HEIGHT - </span> <span className="answer"> &nbsp;{props.height} {props.heightUnit}</span></p>
             <p class="span"><span className="topic">EDUCATION - </span> <span className="answer"> &nbsp;{props.education}</span></p>
         </div>
           
@@ -51,23 +60,26 @@ function Details(props) {
       <td>4s</td>
       <td>6s</td>
     </tr>
-    <tr className="columnNames">
-      <td className="rawName">Overview</td>
-      <td>2012-2021</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
+    {props.careerAvg.map((value, index) => {
+        return <tr className="columnNames">
+        <td className="rawName">Overview</td>
+        <td>{value.sp}</td>
+        <td>{value.mt}</td>
+        <td>{value.in}</td>
+        <td>{value.no}</td>
+        <td>{value.rn}</td>
+        <td>{value.hs}</td>
+        <td>{value.bta}</td>
+        <td>{value.bf}</td>
+        <td>{value.btsr}</td>
+        <td>{value.hn}</td>
+        <td>{value.ft}</td>
+        <td>{value.dk}</td>
+        <td>{value.fo}</td>
+        <td>{value.si}</td>
+      </tr>
+      })}
+
     </table>
       </div>
 
@@ -94,159 +106,26 @@ function Details(props) {
       <td>4s</td>
       <td>6s</td>
     </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs Australia</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs Bangladesh</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs England</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs India</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs New Zealand</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs Pakistan</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs South Africa</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs West Indies</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
-    <tr className="columnNames">
-      <td className="rawName">vs Zimbabwe</td>
-      <td>2012-2019</td>
-      <td>76</td>
-      <td>147</td>
-      <td>5</td>
-      <td>5620</td>
-      <td>244</td>
-      <td>39.57</td>
-      <td>11213</td>
-      <td>50.12</td>
-      <td>14</td>
-      <td>27</td>
-      <td>12</td>
-      <td>590</td>
-      <td>9</td>
-    </tr>
+    {props.vsTeamStats.map((value, index) => {
+        return <tr className="columnNames">
+        <td className="rawName">{value.tt}</td>
+        <td>{value.sp}</td>
+        <td>{value.mt}</td>
+        <td>{value.in}</td>
+        <td>{value.no}</td>
+        <td>{value.rn}</td>
+        <td>{value.hs}</td>
+        <td>{value.bta}</td>
+        <td>{value.bf}</td>
+        <td>{value.btsr}</td>
+        <td>{value.hn}</td>
+        <td>{value.ft}</td>
+        <td>{value.dk}</td>
+        <td>{value.fo}</td>
+        <td>{value.si}</td>
+      </tr>
+      })}
+    
     </table>
       </div>
     </>
