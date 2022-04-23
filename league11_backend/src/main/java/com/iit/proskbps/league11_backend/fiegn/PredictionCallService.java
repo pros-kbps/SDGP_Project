@@ -4,6 +4,7 @@ import com.iit.proskbps.league11_backend.dto.PredictionRequest;
 import com.iit.proskbps.league11_backend.dto.PredictionResponse;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface PredictionCallService {
 
     @RequestMapping(method= RequestMethod.POST, value="/predict")
-    public String getData(@RequestBody PredictionRequest predictionRequest);
+    public ResponseEntity<String> getData(@RequestBody PredictionRequest predictionRequest);
 }
