@@ -42,7 +42,12 @@ public class PlayerStatsService {
                 searchStatsResponse.getPlayer().setVsTeamStats(searchStatsSummaryResponse.getSummary().getGroups().get(i).getStats());
             }
         }
-
+        if(searchStatsResponse.getPlayer().getVsTeamStats()== null){
+            searchStatsResponse.getPlayer().setVsTeamStats(new ArrayList<>());
+        }
+        if(searchStatsResponse.getPlayer().getCareerAvg()== null){
+            searchStatsResponse.getPlayer().setCareerAvg(new ArrayList<>());
+        }
         baseResponse.setData(searchStatsResponse.getPlayer());
 
 
