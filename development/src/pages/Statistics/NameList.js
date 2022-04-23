@@ -5,7 +5,7 @@ import { Link ,useHistory} from 'react-router-dom';
 function NameList(props) {
     const history = useHistory();
     let onClick = async (e) => {
-        let res = await fetch("http://localhost:8081/team-players/player/"+props.objectId, {
+        let res = await fetch("http://128.199.26.201:8081/team-players/player/"+props.objectId, {
             method: "GET",
             headers: { 'Content-Type': 'application/json' }
             

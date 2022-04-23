@@ -33,7 +33,7 @@ let [playerStatsList, setPlayerStatsList] = useState([]);
 
 let getPlayerStatsList= async (team1)=> {
   try {
-    let res = await fetch("http://localhost:8081/team-players/search", {
+    let res = await fetch("http://128.199.26.201:8081/team-players/search", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
