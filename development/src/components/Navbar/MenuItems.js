@@ -18,7 +18,7 @@ export const MenuItems = [
     },
     {
         title: 'ABOUT US',
-        url: '#',
+        url: 'about',
         cName: 'nav-links'
     },
     {
