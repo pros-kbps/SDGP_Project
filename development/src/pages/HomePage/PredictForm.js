@@ -334,8 +334,8 @@ const {
     };
 
     return (
-        <Grid container justify="flex-end">
-        <StyledPaper elevation={4}>
+        <Grid container justify="center">
+        <StyledPaper elevation={12}>
             
         <Form onSubmit={handleSubmit} action="/predict">
             <Grid container >
