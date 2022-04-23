@@ -82,7 +82,7 @@ let handleSubmit = async (e) => {
         <hr></hr>
         <br></br>
 
-        <h1>Choose a Country</h1>
+        <h1>Statistics Page</h1>
         <div class="select" >
           <select name="country" id="country" onChange={handleSubmit} value={team} >
             {teamList.map((value, index) => {
