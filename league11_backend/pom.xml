@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.iit.proskbps</groupId>
 	<artifactId>league11_backend</artifactId>
-	<version>1.0</version>
+	<version>${version}</version>
 	<name>league11_backend</name>
 	<description>Backend for league of 11 prediction system</description>
 	<properties>
