@@ -10,12 +10,19 @@ public class PredictionRequest {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     private Date date;
     private String venue;
-    @NotBlank(message = "Name is mandatory")
+    @NotBlank(message = "Team 1 is Mandatory")
     private String team1;
     private String team2;
     private String tossWinner;
     private String  tossDecision;
 
+    public PredictionRequest( String venue, String team1, String team2, String tossWinner, String tossDecision) {
+        this.venue = venue;
+        this.team1 = team1;
+        this.team2 = team2;
+        this.tossWinner = tossWinner;
+        this.tossDecision = tossDecision;
+    }
 
     public String getVenue() {
         return venue;

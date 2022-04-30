@@ -11,26 +11,34 @@ import org.springframework.stereotype.Service;
 public class PredictionService {
 
     @Autowired
-    public PredictionService() {
+    public PredictionService(PredictionCallService loadBalancer) {
 
+        this.loadBalancer = loadBalancer;
     }
-    @Autowired
+
     private PredictionCallService loadBalancer;
+
+    public String get(){
+        return "OK";
+    }
 
     public BaseResponse<PredictionResponse> predict(PredictionRequest predictionRequest){
 
         BaseResponse<PredictionResponse> result = new BaseResponse<>();
 
         try {
-            PredictionResponse predict = loadBalancer.getData(predictionRequest);
-            System.out.println(predict.getWinningTeam());
+            String predict = loadBalancer.getData(predictionRequest).getBody();
+            System.out.println(predict);
             result.setStatus(true);
-            result.setData(predict);
+            PredictionResponse predictionResponse = new PredictionResponse();
+            predictionResponse.setWinningTeam(predict);
+            result.setData(predictionResponse);
 
         } catch (Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             result.setStatus(false);
-            result.setErrorMsg("You are entered invalid Inputs.");
+            result.setErrorMsg("Error Occurred.");
         }
         return result;
     }
