@@ -7,3 +7,20 @@ body {
 .textField{
     background-color: aliceblue;
 }
+.prediction.leftSide {
+  height: 50%;
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.prediction{
+  padding: 10px 0;
+  text-align: center;
+}
+.prediction img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
