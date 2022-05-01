@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
 import Details from "./Details";
-import {playerOne, playerTwo, playerThree} from './Data';
 
 function Player(props) {
 
   
-  console.log(props.location.state);
+  console.log(props);
   
 
     

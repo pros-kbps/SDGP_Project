@@ -13,6 +13,7 @@ function NameList(props) {
         let resJson = await res.json();
         //data = [team1,team2,venue,tossWinner,tossDecision]
         if (res.status === 200) {
+            console.log(resJson.data);
             resJson.data.countryName=props.countryName;
             history.push({pathname:"/player",state:resJson.data});
             
@@ -38,7 +39,7 @@ function NameList(props) {
 
             <div className="description">
             
-           <h1><Link className="h1" to="/player" state={{ data: props }}>{props.name}</Link></h1> 
+           <h1>{props.name}</h1> 
            <p>{props.longName}</p>
             <p className="age">  Age  { new Date().getFullYear() -props.dateOfBirth?.year} </p>
             </div>

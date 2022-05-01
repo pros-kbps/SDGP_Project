@@ -5,12 +5,14 @@ function Details(props) {
 
   let setArray =(e)=>{
     console.log (e);
-    if(e.length>0){
-      return e[0];
-    }else{
-      return "";
+    if(e){
+      if(e.length>0){
+        return e[0]; 
+      }
     }
+    return "";
   }
+  
   return (
     <>
       <div class="columns">
