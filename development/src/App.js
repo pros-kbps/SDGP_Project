@@ -11,6 +11,8 @@ import Player from './pages/Player/Player';
 import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from "react-router-dom";
 import About from './pages/aboutUs/About';
+import Footer from './components/Footer/Footer';
+
 
 
 
@@ -33,6 +35,7 @@ function App() {
                 
 
             </Switch>
+            <Footer />
         </Router>
       </div>
   );
