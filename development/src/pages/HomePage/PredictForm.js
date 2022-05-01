@@ -293,10 +293,10 @@ const {
     resetForm
 } = useForm(modelObject);
 
-    // const handleSubmit = e => {
-    //     e.preventDefault()
-    //     resetForm()
-    // }
+    const handleReset = e => {
+        e.preventDefault()
+        resetForm()
+    }
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -391,10 +391,7 @@ const {
                             text="Submit"
                             onClick={handleSubmit}
                     />
-                    <Button
-                            text="Reset"
-                            color="default"
-                            onClick={resetForm} />
+
 
                     </Grid>
                         
