@@ -6,6 +6,12 @@ import buhshika from '../../assets/Buhshika.jpg';
 import Pavithra from '../../assets/Pavithra.jpeg';
 import Kaveendra from '../../assets/Kaveendra.jpg';
 import Prayon from '../../assets/Prayon.jpeg';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+
 
 
 function About() {
@@ -43,76 +49,79 @@ function About() {
       <VMC />
 
       <section className="section  border-top ">
-        <div className="container">
-          <div className="Profile">
-          <div className="row">
-            <div className="col-md-15 mb-3 text-center">
-              <h3 className="main-heading">Our Team</h3>
-              <div className="underline mx-auto"></div>
-            </div>
-            <div className="col-md-3">
-              <div className="card shadow">
-                
-                <img src={surami} className="w-8 p-3 border-bottom" alt="Surami" />
-                
-                <div className="card-body">
-                  <p className="info">SURAMI SAMARASEKERA 
-                    <br />
-                    (Pros@kbps leader)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="card shadow">
-                
-                <img src={buhshika} className="w-8 p-3 border-bottom" alt="Buhshika" />
-                
-                <div className="card-body">
-                  <p className="info">BUHUSHIKA KUMARAGE 
-                  <br />
-                  (Pros@kbps member)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="card shadow">
-                <img src={Pavithra} className="w-8 p-3 border-bottom" alt="Pavithreini" />
-                <div className="card-body">
-                  <p className="info">PAVITHREINI RAVICHANDRAN 
-                  <br />
-                  (Pros@kbps member)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="card shadow">
-                <img src={Kaveendra} className="w-8 p-3 border-bottom" alt="Kaveendra" />
-                <div className="card-body">
-                  <p className="info">KAVEENDRA WIJENAYAKA 
-                  <br />
-                  (Pros@kbps member)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="card shadow">
-                <img src={Prayon} className="w-8 p-3 border-bottom" alt="Prayon" />
-                <div className="card-body">
-                  <p className="info">PRAYON FERNANDO 
-                  <br />
-                  (Pros@kbps member)
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          </div>
-        </div>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+        component="img"
+        alt="surami"
+        height="350"
+        img src={surami}/>
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Surami Samarasekara
+        </Typography>
+        </CardContent>
+        </Card>
+        </Grid>
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+        component="img"
+        alt="buhushika"
+        height="350"
+        img src={buhshika}/>
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Buhushika Kumarage
+        </Typography>
+        </CardContent>
+        </Card>
+        </Grid>
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+        component="img"
+        alt="Pavithreini "
+        height="350"
+        img src={Pavithra}/>
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Pavithreini Ravichandran 
+        </Typography>
+        </CardContent>
+        </Card>
+        </Grid>
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+        component="img"
+        alt="kaveendra"
+        height="350"
+        img src={ Kaveendra}/>
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Kaveendra Wijenayaka
+        </Typography>
+        </CardContent>
+        </Card>
+        </Grid>
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+        component="img"
+        alt="preyon"
+        height="350"
+        img src={Prayon}/>
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Prayon Fernando
+        </Typography>
+        </CardContent>
+        </Card>
+        </Grid>
+        </Grid>
+    
       </section>
     </div>
   );
