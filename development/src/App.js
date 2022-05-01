@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -12,11 +11,6 @@ import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from "react-router-dom";
 import About from './pages/aboutUs/About';
 import Footer from './components/Footer/Footer';
-
-
-
-
-
 
 function App() {
   const history = createBrowserHistory();

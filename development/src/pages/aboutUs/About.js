@@ -49,7 +49,7 @@ function About() {
       <VMC />
 
       <section className="section  border-top ">
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid container rowSpacing={6} columnSpacing={{ xs: 15, sm: 5, md: 6 }}>
         <Grid item xs={6}>
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
@@ -59,7 +59,9 @@ function About() {
         img src={surami}/>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Surami Samarasekara
+          <p>Surami Samarasekara</p>
+          <p>IIT ID: 2019729</p>
+          <p>UoW ID: w18102042</p>
         </Typography>
         </CardContent>
         </Card>
@@ -74,6 +76,8 @@ function About() {
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Buhushika Kumarage
+          <p>IIT ID: 2019731</p>
+          <p>UoW ID: w18098176</p>
         </Typography>
         </CardContent>
         </Card>
@@ -87,7 +91,9 @@ function About() {
         img src={Pavithra}/>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-        Pavithreini Ravichandran 
+        <p>Pavithreini Ravichandran</p>
+        <p>IIT ID: 20200530</p>
+        <p>UoW ID: w18302149</p> 
         </Typography>
         </CardContent>
         </Card>
@@ -101,7 +107,9 @@ function About() {
         img src={ Kaveendra}/>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Kaveendra Wijenayaka
+          <p>Kaveendra Wijenayaka</p>
+          <p>IIT ID: 2019626</p>
+          <p>UoW ID: w18097759</p> 
         </Typography>
         </CardContent>
         </Card>
@@ -115,7 +123,9 @@ function About() {
         img src={Prayon}/>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Prayon Fernando
+          <p>Prayon Fernando</p>
+          <p>IIT ID: 20191018</p>
+          <p>UoW ID: w18098231</p> 
         </Typography>
         </CardContent>
         </Card>
